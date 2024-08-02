@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Pastel con Chart.js</title>
+    <link rel="stylesheet" href="../dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="myPieChart"></canvas>
+    <script>
+        let ctx = document.getElementById('myPieChart').getContext('2d');
+        const cfg = {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                data: [{id: 'Sales', nested: {value: 1500}}, {id: 'Purchases', nested: {value: 500}}]
+                }]
+            },
+            options: {
+                parsing: {
+                key: 'nested.value'
+                },
+                layout: {
+                    padding: 100
+                }
+            }
+        }
+        var myPieChart = new Chart(ctx, cfg);
+    </script>
+</body>
+</html>
+
