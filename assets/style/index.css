@@ -24,7 +24,17 @@ header{
     height: var(--header-height);
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+}
+#btn-acceder {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
 }
 footer{
     height: var(--footer-height);    
