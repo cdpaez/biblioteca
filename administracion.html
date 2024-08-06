@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--libreria para utilizar gráficos-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--libreria para importar desde excel-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <!--libreria para utilizar iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./assets/style/style_Dashboard.css">
     <link rel="stylesheet" href="./assets/style/style_Forms1.css">
@@ -19,6 +22,7 @@
     <header class="main__header">
         
         <h1>BIBLIOTECA COMUNITARIA</h1>
+
         <span class="contenedor_busqueda">
             <input type="text" class="cuadro_busqueda" id="cuadro_busqueda" placeholder="buscar...">
             <img id="icono-buscar" src="./img/lupa-blanca.svg" alt="">
@@ -68,7 +72,7 @@
                 <form action="#" class="form-registro" id="form">
                     <h1>Registro de Usuario</h1>
                     <div class="datos__formulario">
-                        <input type="number" id="cedula" placeholder="# cedula">
+                        <input type="text" id="cedula" placeholder="# cedula">
                         <input type="text" id="usuario" placeholder="usuario">
                         <input type="password" id="contrasena1" placeholder="contrasena">
                         <input type="password" id="contrasena2" placeholder="repetir contraseña">
@@ -173,8 +177,8 @@
     <script src="./assets/js/appImportarLBR.js"></script>
     
     <script src="./assets/js/appImportarPRT.js"></script>
-    
     <script src="./assets/js/appEstadisticas.js"></script>
+    <script src="./assets/js/appBuscar.js"></script>
     <script src="./assets/js/appAlmacenObjetos.js"></script>
 </body>
 </html>

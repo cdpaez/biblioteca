@@ -12,19 +12,19 @@ gap: 1%;
 #form {
 
 grid-area: form1;
-width: 300px;
+width: 23vw;
 height: auto;
 }
 #form1 {
 
 grid-area: form2;
-width: 300px;
+width: 23vw;
 height: auto;
 }
 #form2 {
 
 grid-area: form3;
-width: 300px;
+width: 23vw;
 height: auto;
 }
 .form-registro {

@@ -159,7 +159,8 @@
     background-color: #E6E6FA;
     display: flex;
     flex-direction: column;
-    height: 490px;
+    height: 93%;
+    max-height: 85vh;
     overflow-y: auto;
 }
 .lista-prestamos li{

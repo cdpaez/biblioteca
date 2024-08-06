@@ -23,11 +23,11 @@ solicitudBibliotecaBD.onupgradeneeded = (evento) => {
     
 
     //indices creados en los respectivos almacenes de objetos\\
-    bibliotecaUsuarios.createIndex('CI', 'CI', { unique: true });
-    bibliotecaUsuarios.createIndex('email', 'email', { unique: true });
+    bibliotecaUsuarios.createIndex('CI', 'CI', { unique: false });
+    bibliotecaUsuarios.createIndex('email', 'email', { unique: false });
     bibliotecaUsuarios.createIndex('sector', 'sector', { unique: false });
     bibliotecaUsuarios.createIndex('genero', 'genero', { unique: false });
-    bibliotecaLibros.createIndex('codigo', 'codigo', { unique: true });
+    bibliotecaLibros.createIndex('codigo', 'codigo', { unique: false });
     bibliotecaPrestamos.createIndex('codigo','codigo',{unique:true});
     
 
