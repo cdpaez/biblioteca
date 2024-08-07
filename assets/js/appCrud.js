@@ -17,11 +17,16 @@ solicitudBibliotecaBD.onupgradeneeded = (evento) => {
     console.log(`actualizacion exitosa de la base de datos: ${nombreBD}`);
     
     //aca se crea los almacenes de objetos para una base de datos indexada\\
-    let bibliotecaUsuarios = peticion.createObjectStore('usuarios', { keyPath: 'CI' });
-    let bibliotecaLibros = peticion.createObjectStore('libros', { keyPath: 'codigo'});
-    let bibliotecaPrestamos = peticion.createObjectStore('prestamos', { keyPath: 'codigo'});
+    let bibliotecaUsuarios = peticion.createObjectStore('usuarios', {
+         keyPath: 'CI' 
+        });
+    let bibliotecaLibros = peticion.createObjectStore('libros', { 
+        keyPath: 'codigo'
+    });
+    let bibliotecaPrestamos = peticion.createObjectStore('prestamos', { 
+        keyPath: 'codigo'
+    });
     
-
     //indices creados en los respectivos almacenes de objetos\\
     bibliotecaUsuarios.createIndex('CI', 'CI', { unique: false });
     bibliotecaUsuarios.createIndex('email', 'email', { unique: false });
@@ -311,7 +316,7 @@ function mostrarUsuariosBiblioteca(evento, nombreBD){
 
                 const anchor = document.createElement('a');
                 anchor.textContent = item.CI; // Suponiendo que hay un campo "nombre" en tus objetos
-                anchor.href = `/popup/popup.html?id=${item.CI}`;
+                anchor.href = `/popup/popupUsuarios.html?id=${item.CI}`;
                 anchor.onclick = (evento)=>{
                     openPopup(evento, item.nombre);
                 };
@@ -535,7 +540,7 @@ function mostrarLibrosBiblioteca(evento, nombreBD){
 
                 const anchor = document.createElement('a');
                 anchor.textContent = item.codigo; // Suponiendo que hay un campo "codigo" en tus objetos
-                anchor.href = `/popup/popup.html?id=${item.codigo}`;
+                anchor.href = `/popup/popupLibros.html?id=${item.codigo}`;
                 anchor.onclick = (evento)=>{
                     openPopupLibro(evento, item.titulo);
                 };
@@ -737,7 +742,7 @@ function mostrarPrestamosBiblioteca(evento, nombreBD){
 
                 const anchor = document.createElement('a');
                 anchor.textContent = item.codigo; // Suponiendo que hay un campo "codigo" en tus objetos
-                anchor.href = `/popup/popup.html?id=${item.codigo}`;
+                anchor.href = `/popup/popupPrestamos.html?id=${item.codigo}`;
                 anchor.onclick = (evento)=>{
                     openPopupPrestamo(evento, item.codigo);
                 };
